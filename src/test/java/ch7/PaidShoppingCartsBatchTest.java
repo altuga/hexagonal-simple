@@ -39,7 +39,6 @@ public class PaidShoppingCartsBatchTest {
 
         batch.processAll();
 
-
         verify(deliveryCenter).deliver(someCart);
         verify(notifier).sendEstimatedDeliveryNotification(someCart);
         verify(db).persist(someCart);
